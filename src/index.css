@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Kantumruy Pro', 'Noto Sans Khmer', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Khmer text with proper line heights and spacing */
+  .khmer-font {
+    font-family: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+    line-height: 1.85;
+  }
+
+  .mono-font {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes runnerBob {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-7px) rotate(-3deg) scale(1.04); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(-7px) rotate(3deg) scale(1.04); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes dustPuff {
+  0% { opacity: 0.8; transform: translate(0, 0) scale(0.6); }
+  100% { opacity: 0; transform: translate(-20px, -8px) scale(1.4); }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes speedStreaks {
+  0% { transform: translateX(0); opacity: 0.1; }
+  50% { opacity: 0.45; }
+  100% { transform: translateX(-100%); opacity: 0.1; }
+}
+
+.animate-runner {
+  animation: runnerBob 0.36s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-cursor {
+  animation: cursorBlink 0.9s ease-in-out infinite;
+}
+
+.animate-streaks {
+  animation: speedStreaks 1.2s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}

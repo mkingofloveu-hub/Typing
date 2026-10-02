@@ -1,0 +1,6 @@
+{
+  "name": "Khmer Typing Run",
+  "description": "An action-packed Khmer speed typing runner game featuring real-time WPM/CPM stats, dynamic race tracks, NiDA keyboard guide, and Khmer literature.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
